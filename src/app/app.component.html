@@ -1,7 +1,7 @@
-<h1>{{name | lowercase }}</h1>
-<h1>{{value | number }}</h1>
-<h1>{{object | json }}</h1>
+<div class="text-layout">
+  <h1>{{name | lowercase }}</h1>
+  <h1>{{value | number }}</h1>
+  <h1>{{object | json }}</h1>
+</div>
 
-<button (click)="showName()">
-  Change name
-</button>
+<button pButton (click)="showName()" label="Change name"></button>
