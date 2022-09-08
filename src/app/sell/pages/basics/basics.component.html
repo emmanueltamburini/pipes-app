@@ -5,12 +5,27 @@
 
 <div class="grid">
   <div class="col-4">
-    <p-card header="Uppercase"></p-card>
+    <p-card
+      header="Uppercase"
+      [subheader]="'current value: ' + nameLower"
+    >
+      value before pipe: {{nameLower | uppercase}}
+    </p-card>
   </div>
   <div class="col-4">
-    <p-card></p-card>
+    <p-card
+      header="Lowercase"
+      [subheader]="'current value: ' + nameUpper"
+    >
+      value before pipe: {{nameUpper | lowercase}}
+    </p-card>
   </div>
   <div class="col-4">
-    <p-card></p-card>
+    <p-card
+      header="Titlecase"
+      [subheader]="'current value: ' + nameFull"
+    >
+      value before pipe: {{nameFull | titlecase}}
+    </p-card>
   </div>
 </div>
