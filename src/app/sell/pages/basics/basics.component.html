@@ -4,7 +4,7 @@
 </div>
 
 <div class="grid">
-  <div class="col-4">
+  <div class="col-12 sm:col-4">
     <p-card
       header="Uppercase"
       [subheader]="'current value: ' + nameLower"
@@ -12,7 +12,7 @@
       value before pipe: {{nameLower | uppercase}}
     </p-card>
   </div>
-  <div class="col-4">
+  <div class="col-12 sm:col-4">
     <p-card
       header="Lowercase"
       [subheader]="'current value: ' + nameUpper"
@@ -20,12 +20,43 @@
       value before pipe: {{nameUpper | lowercase}}
     </p-card>
   </div>
-  <div class="col-4">
+  <div class="col-12 sm:col-4">
     <p-card
       header="Titlecase"
       [subheader]="'current value: ' + nameFull"
     >
       value before pipe: {{nameFull | titlecase}}
+    </p-card>
+  </div>
+</div>
+
+<div class="text-layout">
+  <h1>Date pipes</h1>
+  <p>Pipe to show date</p>
+</div>
+
+<div class="grid">
+  <div class="col-12 sm:col-6">
+    <p-card>
+      <ul>
+        <li>Current value</li>
+        <li>Value before pipe (date)</li>
+        <li>Value before pipe with argument 'short' (date:'short')</li>
+        <li>Value before pipe with argument 'long' (date:'long')</li>
+        <li>Value before pipe with custom argument (date:'EEEE-HH:mm, dd-MMMM-YYYY')</li>
+      </ul>
+    </p-card>
+  </div>
+  <div class="col-12 sm:col-6">
+    <p-card>
+      <ul>
+        <li>{{date}}</li>
+        <li>{{date | date}}</li>
+        <li>{{date | date:'short'}}</li>
+        <li>{{date | date:'long'}}</li>
+        <li>{{date | date:'EEEE-HH:mm, dd-MMMM-YYYY'}}</li>
+
+      </ul>
     </p-card>
   </div>
 </div>
