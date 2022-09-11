@@ -1,1 +1,29 @@
-<p>numbers works!</p>
+<div class="text-layout">
+  <h1>Decimal pipe and porcentage</h1>
+  <p>Default angular pipes - Common Module</p>
+</div>
+
+<div class="grid">
+  <div class="col-12 sm:col-4">
+    <p-card
+      header="Number pipe"
+      [subheader]="'current number: ' + bigNumber"
+    >
+      <ul>
+        <li>
+          value after pipe: <br>
+          <small>*</small><em class="pi pi-dollar"></em> {{bigNumber | number}} <br><br>
+        </li>
+        <li>
+          value after pipe with argument (number: '0.2-2'): <br>
+          <small>*</small><em class="pi pi-dollar"></em> {{bigNumber | number: '0.2-2'}} <br><br>
+        </li>
+        <li>
+          value after pipe with arguments (number: '0.2-2': 'fr'): <br>
+          <small>*</small><em class="pi pi-dollar"></em> {{bigNumber | number: '0.2-2': 'fr'}} <br><br>
+        </li>
+      </ul>
+      <small>*with dollar symbol from primeNG</small>
+    </p-card>
+  </div>
+</div>
