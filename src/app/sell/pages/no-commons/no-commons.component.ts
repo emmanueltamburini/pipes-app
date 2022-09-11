@@ -37,4 +37,11 @@ export class NoCommonsComponent {
     this.clients.splice(0,1);
   }
 
+  // Key value pipe
+  public person: object = {
+    name: 'Emmanuel',
+    age: 35,
+    address: 'Mérida, Venezuela'
+  };
+
 }
