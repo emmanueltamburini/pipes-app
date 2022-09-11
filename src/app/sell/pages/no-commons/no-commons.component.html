@@ -54,6 +54,15 @@
 
       <strong>'example' value after pipe (slice: 1: 4):</strong>
       <pre>{{ 'example' | slice: 1: 4 }}</pre>
+
+      <button
+        pButton
+        pRipple
+        type="button"
+        label="Delete client"
+        class="p-button-rounded p-button-secondary"
+        (click)="deleteClient()"
+      ></button>
     </p-fieldset>
   </div>
 
