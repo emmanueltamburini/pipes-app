@@ -46,7 +46,7 @@
       <ng-template pTemplate="body" let-hero>
         <tr>
           <td>{{hero.name}}</td>
-          <td>{{hero.fly}}</td>
+          <td>{{hero.fly | fly | titlecase}}</td>
           <td>{{hero.color}}</td>
         </tr>
       </ng-template>
