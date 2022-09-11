@@ -44,4 +44,20 @@ export class NoCommonsComponent {
     address: 'Mérida, Venezuela'
   };
 
+  // Json pipe
+  public heroes: object [] = [
+    {
+      name: 'Superman',
+      fly: true
+    },
+    {
+      name: 'Robin',
+      fly: false
+    },
+    {
+      name: 'Aquaman',
+      fly: false
+    }
+  ];
+
 }
