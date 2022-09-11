@@ -36,26 +36,24 @@
 
 <div class="grid mt-3">
   <div class="col">
-    <p-fieldset legend="Own uppercase pipe" [toggleable]="true">
-
-    <p-table [value]="heroes | sort: sortBy: orderBy">
-      <ng-template pTemplate="header">
-        <tr>
-          <th id="Name-head" >Name</th>
-          <th id="Fly-head" >Fly</th>
-          <th id="Color-head" >Color</th>
-        </tr>
-      </ng-template>
-      <ng-template pTemplate="body" let-hero>
-        <tr>
-          <td>{{hero.name}}</td>
-          <td>{{hero.fly | fly | titlecase}}</td>
-          <td>{{hero.color}}</td>
-        </tr>
-      </ng-template>
-    </p-table>
+    <p-fieldset legend="Own sort pipe" [toggleable]="true">
+      <p-table [value]="heroes | sort: sortBy: orderBy">
+        <ng-template pTemplate="header">
+          <tr>
+            <th id="Name-head" >Name</th>
+            <th id="Fly-head" >Fly</th>
+            <th id="Color-head" >Color</th>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-hero>
+          <tr>
+            <td>{{hero.name}}</td>
+            <td>{{hero.fly | fly | titlecase}}</td>
+            <td>{{hero.color}}</td>
+          </tr>
+        </ng-template>
+      </p-table>
     </p-fieldset>
-
   </div>
 </div>
 
@@ -71,14 +69,38 @@
       <strong>Value after pipe (ownUpperCase: {{ booleanValue }}):</strong>
       <pre>{{ value | ownUpperCase: booleanValue }}</pre>
 
-    <button
-      pButton
-      type="button"
-      label="Change uppercase"
-      class="m-1 p-button-help"
-      (click)="changeBoolean()"
-    >
-    </button>
+      <button
+        pButton
+        type="button"
+        label="Change uppercase"
+        class="m-1 p-button-help"
+        (click)="changeBoolean()"
+      >
+      </button>
+    </p-fieldset>
+  </div>
+</div>
+
+<div class="grid mt-3">
+  <div class="col">
+    <p-fieldset legend="PrimeNG sort table*" [toggleable]="true">
+      <p-table [value]="heroes | slice: 0">
+        <ng-template pTemplate="header">
+          <tr>
+            <th id="Name-head" pSortableColumn="name">Name <p-sortIcon field="name"></p-sortIcon></th>
+            <th id="Fly-head" pSortableColumn="fly">Fly <p-sortIcon field="fly"></p-sortIcon></th>
+            <th id="Color-head" pSortableColumn="color">Color <p-sortIcon field="color"></p-sortIcon></th>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-hero>
+          <tr>
+            <td>{{hero.name}}</td>
+            <td>{{hero.fly | fly | titlecase}}</td>
+            <td>{{hero.color}}</td>
+          </tr>
+        </ng-template>
+      </p-table>
+      <small>*Pipes are not used in this implementation</small>
     </p-fieldset>
   </div>
 </div>
