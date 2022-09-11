@@ -6,15 +6,35 @@
 <div class="grid">
   <div class="col-12 sm:col-6">
     <p-fieldset legend="i18nSelect pipe" [toggleable]="true">
-      Greetings, it is a pleasure to invite you to our event.
-      {{name}} will be you companion,
-      {{gender| i18nSelect: mapPronouns}} will be happy to serve you
+      <p>
+        Greetings, it is a pleasure to invite you to our event.
+        {{name}} will be you companion,
+        {{gender| i18nSelect: mapPronouns}} will be happy to serve you
+      </p>
+      <button
+        pButton
+        pRipple
+        type="button"
+        label="Change person"
+        class="p-button-rounded"
+        (click)="changePerson()"
+      ></button>
     </p-fieldset>
   </div>
 
   <div class="col-12 sm:col-6">
     <p-fieldset legend="i18nPlural pipe" [toggleable]="true">
-      Currently, {{ clients.length | i18nPlural: clientMap }} 
+      <p>
+        Currently, {{ clients.length | i18nPlural: clientMap }}
+      </p>
+      <button
+        pButton
+        pRipple
+        type="button"
+        label="Delete client"
+        class="p-button-rounded p-button-secondary"
+        (click)="deleteClient()"
+        ></button>
     </p-fieldset>
   </div>
 </div>
