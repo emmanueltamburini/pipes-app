@@ -6,7 +6,9 @@
 <div class="grid">
   <div class="col-12 sm:col-6">
     <p-fieldset legend="i18nSelect pipe" [toggleable]="true">
-      Content
+      Greetings, it is a pleasure to invite you to our event.
+      {{name}} will be you companion,
+      {{gender| i18nSelect: mapPronouns}} will be happy to serve you
     </p-fieldset>
   </div>
 
