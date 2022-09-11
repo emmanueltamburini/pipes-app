@@ -45,6 +45,14 @@
         <li>Value before pipe with argument 'long' (date:'long')</li>
         <li>Value before pipe with custom argument (date:'EEEE-HH:mm, dd-MMMM-YYYY')</li>
       </ul>
+      <hr>
+      <ul>
+        <li>Value before pipe with argument 'long' and argument timezone (date:'long': 'GMT-6')</li>
+        <li>Value before pipe with argument 'long' and argument timezone (date:'long': 'GMT-5')</li>
+        <li>Value before pipe with argument 'long', argument language (date:'long': '': 'en')</li>
+        <li>Value before pipe with argument 'long', argument language (date:'long': '': 'fr')</li>
+        <li>Value before pipe with argument 'long', argument language (date:'long': '': 'es-VE')</li>
+      </ul>
     </p-card>
   </div>
   <div class="col-12 sm:col-6">
@@ -55,7 +63,14 @@
         <li>{{date | date:'short'}}</li>
         <li>{{date | date:'long'}}</li>
         <li>{{date | date:'EEEE-HH:mm, dd-MMMM-YYYY'}}</li>
-
+      </ul>
+      <hr>
+      <ul>
+        <li>{{date | date:'long': 'GMT-6'}}</li>
+        <li>{{date | date:'long': 'GMT-5'}}</li>
+        <li>{{date | date:'long': '': 'en'}}</li>
+        <li>{{date | date:'long': '': 'fr'}}</li>
+        <li>{{date | date:'long': '': 'es-VE'}}</li>
       </ul>
     </p-card>
   </div>
