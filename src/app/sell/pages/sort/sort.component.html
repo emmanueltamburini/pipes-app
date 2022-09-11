@@ -13,6 +13,7 @@
         icon="pi pi-sort"
         label="By name"
         class="m-1"
+        (click)="changeSortBy('name')"
       ></button>
       <button
         pButton
@@ -20,6 +21,7 @@
         icon="pi pi-sort"
         label="By fly"
         class="m-1 p-button-success"
+        (click)="changeSortBy('fly')"
       ></button>
       <button
         pButton
@@ -27,6 +29,7 @@
         icon="pi pi-sort"
         label="By color"
         class="m-1 p-button-warning"
+        (click)="changeSortBy('color')"
       ></button>
   </div>
 </p-toolbar>
@@ -35,7 +38,7 @@
   <div class="col">
     <p-fieldset legend="Own uppercase pipe" [toggleable]="true">
 
-    <p-table [value]="heroes | sort">
+    <p-table [value]="heroes | sort: sortBy: orderBy">
       <ng-template pTemplate="header">
         <tr>
           <th id="Name-head" >Name</th>

@@ -8,6 +8,8 @@ import { Color, Heroe } from '../../interfaces/sell.interfaces';
 export class SortComponent {
   public value: string = 'Example';
   public booleanValue: boolean = false;
+  public sortBy: string = '';
+  public orderBy: boolean = true;
   public heroes: Heroe[] = [
     {
       name: 'Superman',
@@ -35,6 +37,15 @@ export class SortComponent {
       color: Color.green
     },
   ];
+
+  public changeSortBy(value: string): void {
+    if (this.sortBy === value) {
+      this.orderBy = !this.orderBy;
+    } else {
+      this.orderBy = true;
+    }
+    this.sortBy = value;
+  }
 
   public changeBoolean(): void {
     this.booleanValue = !this.booleanValue;
