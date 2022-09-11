@@ -5,6 +5,7 @@ import { Component } from '@angular/core';
   templateUrl: './no-commons.component.html'
 })
 export class NoCommonsComponent {
+  // i18nSelect
   public name: string = 'Emmanuel';
   public gender: string = 'male'
 
@@ -12,5 +13,13 @@ export class NoCommonsComponent {
     'female': 'she',
     'male': 'he'
   }
+
+    // i18nPlural
+    public clients: string [] = ['Ana', 'Pedro', 'Diana'];
+    public clientMap: { [key: string]: string } = {
+      '=0': 'we do not have any client waiting',
+      '=1': 'we have a client waitng',
+      'other': 'we have # clients waiting'
+    }
 
 }
