@@ -1,14 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-sort',
   templateUrl: './sort.component.html'
 })
-export class SortComponent implements OnInit {
+export class SortComponent {
+  public value: string = 'Example';
+  public booleanValue: boolean = false;
 
-  constructor() { }
-
-  ngOnInit(): void {
+  public changeBoolean(): void {
+    this.booleanValue = !this.booleanValue;
   }
-
 }

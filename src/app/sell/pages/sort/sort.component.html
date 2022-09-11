@@ -1,1 +1,30 @@
-<p>sort works!</p>
+<div class="text-layout">
+  <h1>Custom pipes</h1>
+  <p>My own custom pipes</p>
+</div>
+
+<div class="grid">
+  <div class="col-12 sm:col-6">
+    <p-fieldset legend="Own uppercase pipe" [toggleable]="true">
+      <strong>Original value</strong>
+      <pre>{{ value }}</pre>
+
+      <strong>Value after pipe (ownUpperCase):</strong>
+      <pre>{{ value | ownUpperCase }}</pre>
+
+      <strong>Value after pipe (ownUpperCase: {{ booleanValue }}):</strong>
+      <pre>{{ value | ownUpperCase: booleanValue }}</pre>
+
+      <button
+        pButton
+        pRipple
+        type="button"
+        label="Change uppercase"
+        class="p-button-rounded p-button-primary"
+        (click)="changeBoolean()"
+      >
+      </button>
+
+    </p-fieldset>
+  </div>
+</div>
