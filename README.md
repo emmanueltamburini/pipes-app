@@ -2,7 +2,7 @@
 
 ## PipesApp README
 
-This app is a personal example about angular framework using pipe. This app has not a real functionality, it was created to try different pipes of angular: commons, no commons and even created pipes, also this app implement components from PrimeNG..
+This app is a personal example about angular framework using pipe. This app has not a real functionality, it was created to try different pipes of angular: commons, no commons and even created pipes, also this app implement components from PrimeNG.
 
 You can check final result [here](https://golden-platypus-c80237.netlify.app/) (if you have a problem with url please notice to emmanueltamburini@gmail.com)
 
